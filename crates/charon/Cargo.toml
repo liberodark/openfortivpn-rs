@@ -1,0 +1,24 @@
+[package]
+name = "ofv-charon"
+description = "IKEv2/IPsec tunnel to a FortiGate driven through a strongSwan charon daemon"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[dependencies]
+ofv-pki = { workspace = true }
+ofv-ikev2 = { workspace = true }
+ofv-vici = { workspace = true }
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+secrecy = { workspace = true }
+zeroize = { workspace = true }
+sd-notify = { workspace = true }
+
+[lints]
+workspace = true

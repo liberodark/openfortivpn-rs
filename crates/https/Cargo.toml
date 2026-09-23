@@ -1,0 +1,31 @@
+[package]
+name = "ofv-https"
+description = "HTTPS client for the web side of Fortinet gateways: rustls, a minimal HTTP/1.1, browser redirects"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[dependencies]
+ofv-pki = { workspace = true }
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+secrecy = { workspace = true }
+zeroize = { workspace = true }
+rustls = { workspace = true }
+rustls-pki-types = { workspace = true }
+rustls-native-certs = { workspace = true }
+tokio-rustls = { workspace = true }
+x509-parser = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+
+[target.'cfg(any(target_os = "macos", target_os = "freebsd"))'.dependencies]
+nix = { workspace = true, features = ["net"] }
+
+[lints]
+workspace = true

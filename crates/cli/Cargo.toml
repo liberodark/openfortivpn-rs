@@ -1,0 +1,36 @@
+[package]
+name = "openfortivpn-rs"
+description.workspace = true
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[[bin]]
+name = "openfortivpn-rs"
+path = "src/main.rs"
+
+[dependencies]
+ofv-pki = { workspace = true }
+ofv-https = { workspace = true }
+ofv-ikev2 = { workspace = true }
+ofv-charon = { workspace = true }
+ofv-sslvpn = { workspace = true }
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+secrecy = { workspace = true }
+zeroize = { workspace = true }
+sd-notify = { workspace = true }
+clap = { workspace = true }
+rpassword = { workspace = true }
+nix = { workspace = true }
+
+[lints]
+workspace = true

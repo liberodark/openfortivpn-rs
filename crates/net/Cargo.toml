@@ -1,0 +1,18 @@
+[package]
+name = "ofv-net"
+description = "TUN device, routes and DNS for the openfortivpn-rs tunnels"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[dependencies]
+tokio = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+tun-rs = { workspace = true }
+
+[lints]
+workspace = true

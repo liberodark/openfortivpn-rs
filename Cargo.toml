@@ -1,0 +1,94 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/pki",
+    "crates/https",
+    "crates/vici",
+    "crates/ikev2",
+    "crates/charon",
+    "crates/net",
+    "crates/sslvpn",
+    "crates/cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+authors = ["liberodark"]
+description = "Client for Fortinet VPN gateways: SSL VPN and IKEv2/IPsec, natively"
+repository = "https://github.com/liberodark/openfortivpn-rs"
+license = "GPL-3.0-only"
+keywords = ["vpn", "fortinet", "fortigate", "ipsec", "ikev2"]
+categories = ["command-line-utilities", "network-programming"]
+
+[workspace.dependencies]
+ofv-pki = { path = "crates/pki" }
+ofv-https = { path = "crates/https" }
+ofv-vici = { path = "crates/vici" }
+ofv-ikev2 = { path = "crates/ikev2" }
+ofv-charon = { path = "crates/charon" }
+ofv-net = { path = "crates/net" }
+ofv-sslvpn = { path = "crates/sslvpn" }
+
+tokio = { version = "1", features = ["rt", "net", "io-util", "time", "signal", "macros", "process", "sync"] }
+tokio-util = { version = "0.7", features = ["rt"] }
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["fmt"] }
+zeroize = { version = "1", features = ["derive"] }
+secrecy = "0.10"
+pem = "3"
+pkcs8 = { version = "0.10", features = ["encryption", "pem", "std"] }
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12", "logging"] }
+rustls-pki-types = "1"
+rustls-native-certs = "0.8"
+tokio-rustls = { version = "0.26", default-features = false, features = ["ring", "tls12", "logging"] }
+x509-parser = "0.17"
+rustls-webpki = { version = "0.103", default-features = false, features = ["ring", "std"] }
+subtle = "2"
+num-bigint-dig = { version = "0.8", features = ["zeroize"] }
+rand_core = { version = "0.6", features = ["getrandom"] }
+hmac = "0.12"
+sha1 = "0.10"
+md4 = "0.10"
+md-5 = "0.10"
+des = "0.8"
+aes = "0.8"
+cbc = { version = "0.1", features = ["alloc", "block-padding"] }
+aes-gcm = "0.10"
+chacha20poly1305 = "0.10"
+p256 = { version = "0.13", features = ["ecdh", "ecdsa", "pkcs8"] }
+p384 = { version = "0.13", features = ["ecdh", "ecdsa", "pkcs8"] }
+p521 = { version = "0.13", features = ["ecdh", "ecdsa", "pkcs8"] }
+x25519-dalek = { version = "2", features = ["static_secrets"] }
+ring = "0.17"
+ecdsa = { version = "0.16", features = ["der"] }
+tun-rs = { version = "2", features = ["async_tokio"] }
+rand = "0.9"
+sha2 = "0.10"
+hex = "0.4"
+clap = { version = "4", features = ["derive"] }
+rpassword = "7"
+nix = { version = "0.29", features = ["user"] }
+sd-notify = "0.4"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+dead_code = "deny"
+unused_imports = "deny"
+unused_variables = "deny"
+unused_must_use = "deny"
+
+[workspace.lints.clippy]
+all = { level = "deny", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
+doc_markdown = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

@@ -1,0 +1,52 @@
+[package]
+name = "ofv-ikev2"
+description = "Native IKEv2/IPsec client for FortiGate gateways: IKEv2, EAP and ESP in userspace"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[dependencies]
+ofv-pki = { workspace = true }
+ofv-https = { workspace = true }
+nix = { workspace = true, features = ["hostname", "feature"] }
+ofv-net = { workspace = true }
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+secrecy = { workspace = true }
+zeroize = { workspace = true }
+sd-notify = { workspace = true }
+rand_core = { workspace = true }
+hex = { workspace = true }
+subtle = { workspace = true }
+num-bigint-dig = { workspace = true }
+hmac = { workspace = true }
+sha1 = { workspace = true }
+sha2 = { workspace = true }
+md4 = { workspace = true }
+md-5 = { workspace = true }
+des = { workspace = true }
+aes = { workspace = true }
+cbc = { workspace = true }
+aes-gcm = { workspace = true }
+chacha20poly1305 = { workspace = true }
+p256 = { workspace = true }
+p384 = { workspace = true }
+p521 = { workspace = true }
+x25519-dalek = { workspace = true }
+ring = { workspace = true }
+ecdsa = { workspace = true }
+x509-parser = { workspace = true }
+rustls-webpki = { workspace = true }
+rustls-pki-types = { workspace = true }
+rustls-native-certs = { workspace = true }
+
+[dev-dependencies]
+pem = { workspace = true }
+
+[lints]
+workspace = true
