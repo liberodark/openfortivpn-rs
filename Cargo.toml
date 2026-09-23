@@ -55,7 +55,7 @@ md4 = "0.10"
 md-5 = "0.10"
 des = "0.8"
 aes = "0.9"
-cbc = { version = "0.1", features = ["alloc", "block-padding"] }
+cbc = { version = "0.2", features = ["alloc", "block-padding"] }
 aes-gcm = "0.10"
 chacha20poly1305 = "0.10"
 p256 = { version = "0.13", features = ["ecdh", "ecdsa", "pkcs8"] }
