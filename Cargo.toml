@@ -65,7 +65,7 @@ x25519-dalek = { version = "2", features = ["static_secrets"] }
 ring = "0.17"
 ecdsa = { version = "0.16", features = ["der"] }
 tun-rs = { version = "2", features = ["async_tokio"] }
-rand = "0.9"
+rand = "0.10"
 sha2 = "0.10"
 hex = "0.4"
 clap = { version = "4", features = ["derive"] }
