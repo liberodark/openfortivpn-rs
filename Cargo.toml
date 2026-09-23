@@ -49,7 +49,7 @@ rustls-webpki = { version = "0.103", default-features = false, features = ["ring
 subtle = "2"
 num-bigint-dig = { version = "0.8", features = ["zeroize"] }
 rand_core = { version = "0.6", features = ["getrandom"] }
-hmac = "0.12"
+hmac = "0.13"
 sha1 = "0.10"
 md4 = "0.10"
 md-5 = "0.10"

@@ -1371,7 +1371,7 @@ dependencies = [
  "des",
  "ecdsa",
  "hex",
- "hmac 0.12.1",
+ "hmac 0.13.0",
  "md-5",
  "md4",
  "nix 0.31.3",
