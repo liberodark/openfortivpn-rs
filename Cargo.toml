@@ -71,7 +71,7 @@ hex = "0.4"
 clap = { version = "4", features = ["derive"] }
 rpassword = "7"
 nix = { version = "0.31", features = ["user"] }
-sd-notify = "0.4"
+sd-notify = "0.5"
 
 [workspace.lints.rust]
 unsafe_code = "forbid"
