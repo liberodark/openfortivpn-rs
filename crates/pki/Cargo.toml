@@ -1,0 +1,19 @@
+[package]
+name = "ofv-pki"
+description = "PEM certificates and private keys for the openfortivpn-rs tunnels"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[dependencies]
+thiserror = { workspace = true }
+secrecy = { workspace = true }
+zeroize = { workspace = true }
+pem = { workspace = true }
+pkcs8 = { workspace = true }
+
+[lints]
+workspace = true
