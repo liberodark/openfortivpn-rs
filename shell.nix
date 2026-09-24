@@ -11,11 +11,10 @@ pkgs.mkShell {
     rustfmt
     rust-analyzer
     git
-    pkg-config
   ];
 
   shellHook = ''
-    rustfmt --edition 2024 crates/*/src/*.rs
+    cargo fmt --all
     cargo audit
   '';
 
