@@ -57,7 +57,7 @@ des = "0.8"
 aes = "0.8"
 cbc = { version = "0.1", features = ["alloc", "block-padding"] }
 aes-gcm = "0.10"
-chacha20poly1305 = "0.10"
+chacha20poly1305 = "0.11"
 p256 = { version = "0.13", features = ["ecdh", "ecdsa", "pkcs8"] }
 p384 = { version = "0.13", features = ["ecdh", "ecdsa", "pkcs8"] }
 p521 = { version = "0.13", features = ["ecdh", "ecdsa", "pkcs8"] }
