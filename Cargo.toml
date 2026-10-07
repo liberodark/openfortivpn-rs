@@ -60,7 +60,7 @@ aes-gcm = "0.11"
 chacha20poly1305 = "0.11"
 p256 = { version = "0.13", features = ["ecdh", "ecdsa", "pkcs8"] }
 p384 = { version = "0.13", features = ["ecdh", "ecdsa", "pkcs8"] }
-p521 = { version = "0.13", features = ["ecdh", "ecdsa", "pkcs8"] }
+p521 = { version = "0.14", features = ["ecdh", "ecdsa", "pkcs8"] }
 x25519-dalek = { version = "2", features = ["static_secrets"] }
 ring = "0.17"
 ecdsa = { version = "0.17", features = ["der"] }
