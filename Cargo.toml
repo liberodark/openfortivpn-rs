@@ -50,7 +50,7 @@ subtle = "2"
 num-bigint-dig = { version = "0.8", features = ["zeroize"] }
 rand_core = { version = "0.6", features = ["getrandom"] }
 hmac = "0.13"
-sha1 = "0.10"
+sha1 = "0.11"
 md4 = "0.10"
 md-5 = "0.10"
 des = "0.9"
